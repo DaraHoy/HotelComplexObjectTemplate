@@ -1,6 +1,5 @@
 var hotel = {
-    rooms: [
-        {
+    rooms: [{
             name: "Double Bed",
             price: "$75.00",
             available: 40
@@ -19,3 +18,17 @@ var hotel = {
     name: "CareerDevs Innt"
 }
 
+for (var i = 0; i < hotel.rooms.length; i++) {
+    var radioBtn = document.createElement('INPUT');
+    var radioLbl = document.createElement('LABEL');
+    radioBtn.setAttribute('type', "radio");
+    radioBtn.setAttribute('name', "rooms");
+    radioBtn.setAttribute('value', i);
+    radioBtn.setAttribute('id', "room" + i);
+    radioLbl.innerHTML = hotel.rooms[i].name;
+    document.getElementById('radialSection').appendChild(radioBtn);
+    document.getElementById('radialSection').appendChild(radioLbl);
+
+}
+
+// console.log(document.getElementById("radio").nodeName)
